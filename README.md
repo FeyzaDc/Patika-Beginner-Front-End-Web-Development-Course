@@ -1,2 +1,3 @@
-# Patika-Beginner-Front-End-Web-Development-Course
-The studies prepared for my front end web development course on patika.dev
+### Beginner Frontend Web Development Course
+In this course, I improved my knowledge of **HTML**, **CSS**, **BOOTSTARP**, **JAVASCRIPT** and **DATA STRUCTURES**. I did exercises for the topics and published them.  
+* Certificate link: https://app.patika.dev/certificates/qunH9mb  
