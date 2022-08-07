@@ -1,0 +1,44 @@
+* {
+    margin: 0%;
+    padding: 0%;
+} 
+
+body {
+    text-align: center;
+    margin: 50px;
+    margin-top: 50px;
+} 
+
+.logo {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.search {
+    margin: 2px;
+    text-align: center;
+    background-color: #e0e0e0;
+}
+
+.blok1 {
+    width: 10%;
+    padding: 5px;
+    background: #7EE5DA;
+}
+
+.blok2 {
+    width: 5%;
+    padding: 5px;
+    font-size: 13px;
+    background: #70CCC2;
+}
+
+.blok3 {
+    width: 10%;
+    padding: 5px;
+    font-size: 13px;
+    background: #62B3AA;
+}
+
+/* margin - dış kenar boşluğu
+   padding - iç kenar boşluğu
