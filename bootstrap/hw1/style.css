@@ -1,0 +1,19 @@
+body {
+    background-color: #E9ECEF;
+}
+
+.txt-purple{
+    color: blueviolet;;
+}
+.txt-orange{
+    color: rgb(211, 144, 0);
+}
+
+.price-bg {
+    background-color: rgb(85, 85, 85);
+    color: white;
+    width: 100%;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 12px;
+}
