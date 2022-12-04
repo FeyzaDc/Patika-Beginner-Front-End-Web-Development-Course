@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            width: 100px;
+            font-size: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="number"></h1>
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+    
+</body>
+
+<script>
+    let num = localStorage.getItem('num') ? localStorage.getItem('num') : 0;
+    let numberDOM = document.querySelector('#number');
+    let increaseDOM = document.querySelector('#increase');
+    let decreaseDOM = document.querySelector('#decrease');
+
+    numberDOM.innerHTML = num;
+
+    increaseDOM.addEventListener("click", clickEvent);
+    decreaseDOM.addEventListener("click", clickEvent);
+
+    function clickEvent() {
+        this.id == "increase" ? num ++ : num --
+        localStorage.setItem('num', num)
+        numberDOM.innerHTML = num;        
+    }
+
+</script>
+</html>
