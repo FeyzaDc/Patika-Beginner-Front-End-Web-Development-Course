@@ -1,21 +1,36 @@
 import { useState, useEffect } from "react";
 
-const initialFormValues = { todoname: "" };
+const initialFormValues = { todoName: "" };
 
-function Header() {
-  
+function Header({}) {
+  const [todo, setTodo] = useState(initialFormValues);
+
+  const onChangeInput = (e) => {
+    setTodo({ [e.target.name]: e.target.value });
+  };
+
+  const onSumbitForm = (e) => {
+    e.preventDefault();
+
+    if (todo.todoName === "") {
+      return false;
+    }
+  };
+
   return (
-    <header className="header">
+    <>
       <h1>todos</h1>
-      <form >
+      <form onSubmit={onSumbitForm}>
         <input
           className="new-todo"
           autoFocus
-          name="todoname"
+          name="todoName"
           placeholder="What needs to be done?"
+          value={todo.name}
+          onChange={onChangeInput}
         />
       </form>
-    </header>
+    </>
   );
 }
 
