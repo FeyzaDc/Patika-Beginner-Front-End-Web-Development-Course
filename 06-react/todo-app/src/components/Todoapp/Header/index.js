@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react";
 
-const initialFormValues = { todoName: "" };
+const initial = { todoName: "" }
 
-function Header({}) {
-  const [todo, setTodo] = useState(initialFormValues);
+function Header({ addTodo, todos }) {
+  const [form, setForm] = useState(initial);
 
   const onChangeInput = (e) => {
-    setTodo({ [e.target.name]: e.target.value });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const onSumbitForm = (e) => {
     e.preventDefault();
 
-    if (todo.todoName === "") {
+    if (form.todoName === "") {
       return false;
     }
+
+    addTodo([...todos, form])
+    setForm(initial)
   };
 
   return (
@@ -26,7 +29,7 @@ function Header({}) {
           autoFocus
           name="todoName"
           placeholder="What needs to be done?"
-          value={todo.name}
+          value={form.todoName}
           onChange={onChangeInput}
         />
       </form>

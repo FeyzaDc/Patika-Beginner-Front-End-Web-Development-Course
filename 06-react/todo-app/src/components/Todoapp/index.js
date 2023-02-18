@@ -5,10 +5,16 @@ import Main from "./Main";
 import Footer from "./Footer";
 
 function Todoapp() {
+  const [todos, setTodos] = useState([])
+
+  useEffect(() => {
+    console.log(todos)
+  }, [todos])
+
   return (
     <div className="todoapp">
-      <Header/>
-      <Main />
+      <Header addTodo={setTodos} todos={todos}/>
+      <Main todoList={todos}/>
       <Footer />
     </div>
   );
